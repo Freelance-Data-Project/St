@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; }
+body {
+  margin: 0; padding: 18px 12px; min-height: 100vh;
+  background: #050505; color: #f7f7f7;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.page-card {
+  width: min(100%, 820px); margin: 0 auto; padding: 68px 34px 28px;
+  background: #111; border: 5px solid #383838; border-radius: 52px;
+  text-align: center; box-shadow: 0 0 28px rgba(0,0,0,.45);
+}
+.profile { display: flex; justify-content: center; margin-bottom: 54px; }
+.profile-photo {
+  width: 242px; height: 242px; object-fit: cover;
+  border: 11px solid #ffcc08; border-radius: 50%;
+}
+h1 {
+  margin: 0 0 52px; color: #ffcc08; font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.12; letter-spacing: 1px; font-weight: 800;
+}
+h2 { margin: 0 0 38px; font-size: clamp(25px, 4.8vw, 42px); line-height: 1.2; }
+.markets { margin: 0 0 56px; color: #d6d6d6; font-size: clamp(19px, 3.7vw, 31px); }
+.markets span { color: #fff; }
+.telegram-btn {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 118px; width: 100%; padding: 20px 18px; border-radius: 58px;
+  background: linear-gradient(110deg, #08b9e8, #2783f4);
+  color: #fff; text-decoration: none; font-size: clamp(23px, 4.6vw, 40px);
+  font-weight: 700; line-height: 1.2;
+  box-shadow: 0 0 22px rgba(0,166,255,.20);
+  animation: glow 1.8s ease-in-out infinite alternate;
+}
+.telegram-btn:focus-visible, a:focus-visible { outline: 3px solid #ffcc08; outline-offset: 5px; }
+@keyframes glow {
+  from { box-shadow: 0 0 12px rgba(0,166,255,.20); }
+  to { box-shadow: 0 0 30px rgba(0,166,255,.55); }
+}
+.benefits {
+  list-style: none; text-align: left; margin: 72px 0 68px; padding: 0 0 0 4px;
+}
+.benefits li {
+  position: relative; margin: 0 0 34px; padding-left: 58px;
+  font-size: clamp(22px, 4.2vw, 36px); line-height: 1.25;
+}
+.benefits li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  color: #777; font-family: Arial, sans-serif; font-weight: 800;
+}
+.risk {
+  max-width: 680px; margin: 0 auto 68px; color: #ffcc08;
+  font-size: clamp(19px, 3.5vw, 29px); line-height: 1.25;
+}
+.managed {
+  display: inline-block; padding: 22px 32px; border: 4px solid #505050;
+  border-radius: 42px; background: #242424; font-size: clamp(20px, 3.8vw, 31px);
+  font-weight: 700;
+}
+.managed span { color: #13a7ff; }
+footer { margin-top: 34px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; font: 15px Arial, sans-serif; }
+footer a { color: #bdbdbd; }
+.disclaimer { max-width: 700px; margin: 18px auto 0; color: #999; font: 12px/1.5 Arial, sans-serif; }
+@media (max-width: 520px) {
+  body { padding: 10px 8px; }
+  .page-card { padding: 48px 22px 24px; border-width: 4px; border-radius: 38px; }
+  .profile { margin-bottom: 48px; }
+  .profile-photo { width: 220px; height: 220px; }
+  h1 { margin-bottom: 54px; }
+  h2 { margin-bottom: 38px; }
+  .markets { margin-bottom: 54px; }
+  .telegram-btn { min-height: 112px; }
+  .benefits { margin: 72px 0 68px; }
+  .benefits li { padding-left: 42px; margin-bottom: 32px; }
+  .risk { margin-bottom: 68px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .telegram-btn { animation: none; }
+}
